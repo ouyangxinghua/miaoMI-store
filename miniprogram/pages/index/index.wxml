@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <view class="searchBar">
+      <view class="searchBar-inner" bindtap="searchNav">
+        <image src="../../images/搜索.png" style="width: 30rpx; height: 30rpx;vertical-align: middle;" /> 搜索商品
+      </view>
+    </view>
+    <swiper style="height: 350rpx;" indicator-dots="true" autoplay="true" interval="3000" circular="true" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#ffffff" current='1'>
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image class="slide-image" src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="header-menu">
+      <view class="header-menu__item" wx:for="{{menu}}" wx:key="index">
+        <image src="{{item.icon}}" style="width: 60rpx;height:60rpx;" />
+        <text class="header-menu__text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="goodList">
+    <view class="goodList-title">
+      <text class="">人气推荐</text>
+    </view>
+    <view class="goodList-item">
+      <shopList url="{{first.url}}" name="{{first.name}}" brief="{{first.brief}}" price="{{first.price}}" oldPrice="{{first.oldPrice}}" class="topBorder"></shopList>
+    </view>
+    <view class="list">
+      <block wx:for="{{goodList}}" wx:key="{{item.id}}">
+        <view class="item topBorder rightBorder" data-id="{{item.id}}" bindtap="goDetails">
+          <shopList url="{{item.url}}" name="{{item.name}}" brief="{{item.brief}}" price="{{item.price}}" oldPrice="{{item.oldPrice}}"></shopList>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

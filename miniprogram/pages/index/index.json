@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shopList": "../../components/shopList/shopList"
+  },
+  "enablePullDownRefresh": true
+}

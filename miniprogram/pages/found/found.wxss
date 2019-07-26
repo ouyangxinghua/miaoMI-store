@@ -1,0 +1,45 @@
+/* miniprogram/pages/found/found.wxss */
+@import "../../template/found/found.wxss";
+.container{
+    width: 100%;
+}
+image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.header{
+    width: 100%;
+    height:160rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+text{
+    display: block;
+    font-size: 28rpx;
+    color: rgba(0,0,0,0.6);
+    margin-top: 25rpx;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.header::before{
+    content: '';
+    width: 1rpx;
+    height: 110rpx;
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    left: 33.3%;
+}
+.header::after{
+    content: '';
+    width: 1rpx;
+    height: 110rpx;
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    right: 33.3%;
+}

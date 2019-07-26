@@ -1,0 +1,38 @@
+.main{
+    margin: auto;
+    margin-top: 20rpx;
+    width: 96%;
+    height: 40vh;
+    border-radius: 15rpx;
+    background-color: #fff;
+    color: black; 
+}
+.pic{
+    width: 100%;
+    height: 30vh;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius: 15rpx 15rpx 0 0;
+}
+.message{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 70rpx;
+    height: 40rpx;
+    background-color: #fd6800;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 25rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+.title{
+    font-size: 32rpx;
+    line-height: 10vh;
+}

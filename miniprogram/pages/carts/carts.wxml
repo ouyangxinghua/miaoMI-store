@@ -1,0 +1,59 @@
+<view class="container">
+  <block wx:if="{{!hasCart}}">
+    <view class="cartNull">
+      <view class="img">
+        <image src="../../images/购物车.png" />
+      </view>
+      <view class="text">
+        <text>购物车还是空的</text>
+      </view>
+      <view class="navIndex">
+        <text bindtap="goIndex">到小米商城逛逛</text>
+      </view>
+    </view>
+  </block>
+  <!-- 购物车不为空时显示的内容 -->
+  <block wx:else>
+    <!-- 商品的列表 -->
+    <view class="cart_lists">
+      <block wx:for="{{cartgoods}}" wx:key="{{index}}">
+        <view class="cart_list" catch:tap="goDeleteGoods" data-index="{{index}}" data-id="{{item.id}}">
+          <!-- 勾选图标 -->
+          <image src="{{!item.select ? '../../images/is.png' : '../../images/no.png'}}" class="image-gou" catch:tap="selectList" data-index="{{index}}" />
+          <!-- 商品图标 名称 颜色 价格 -->
+          <view class="cart_list__img__name__color">
+            <view class="cart_list__img">
+              <image src="{{item.img}}" mode="widthFix" />
+            </view>
+            <view class="cart_list__name__color">{{item.name}} {{item.color}}</view>
+          </view>
+          <view class="cart_list__price">
+            {{item.num}}×
+            <text>{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!-- 底部购买信息 -->
+    <view class="cart_footer">
+      <!-- 结算的相关信息 -->
+      <view class="selectALL__total" bindtap="selectAll">
+        <view class="selectAll">
+          <!-- 全选图标 -->
+          <image src="{{!selectAll ? '../../images/is.png' : '../../images/no.png'}}" class="image-gou" />
+          <text>全选</text>
+        </view>
+        <!-- 合计的价格 -->
+        <view class="total">
+          <text>合计:</text>
+          <text>￥{{totalPrice}}</text>
+          <text>元</text>
+        </view>
+      </view>
+      <!-- 结算按钮 -->
+      <view class="settlement {{selectAll ? '': 'on'}}">
+        <text>结算</text>
+      </view>
+    </view>
+  </block>
+</view>

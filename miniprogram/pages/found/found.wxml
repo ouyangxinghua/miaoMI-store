@@ -1,0 +1,25 @@
+<!-- miniprogram/pages/found/found.wxml -->
+<import src="../../template/found/found.wxml" />
+<view class="container">
+    <view class="header">
+        <view class="item">
+            <image src="../../images/爱心.png" />
+            <text>新品预约</text>
+        </view>
+        <view class="item">
+            <image src="../../images/资讯频道_海外买房40x40.png" />
+            <text>活动频道</text>
+        </view>
+        <view class="item">
+            <image src="../../images/门店.png" />
+            <text>线下门店</text>
+        </view>
+    </view>
+    <view class="found-items">
+        <block wx:for="{{foundItem}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+            <view bindtap="previewImage" data-index="{{index}}" data-imgUrl="{{item}}">
+                <template is="item" data="{{item}}"></template>
+            </view>
+        </block>
+    </view>
+</view>

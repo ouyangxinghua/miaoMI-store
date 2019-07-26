@@ -1,0 +1,11 @@
+<template name="item">
+    <view class="main">
+        <view class="pic">
+            <image src="{{item.imgUrl}}" class="image" />
+        </view>
+        <view class="message">
+            <view class="icon">{{item.type}}</view>
+            <view class="title">{{item.title}}</view>
+        </view>
+    </view>
+</template>
