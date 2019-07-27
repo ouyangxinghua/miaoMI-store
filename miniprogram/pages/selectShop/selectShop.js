@@ -124,7 +124,6 @@ Page({
       img: this.data.imgSrc,
       select: true
     }
-    // wx.removeStorageSync('goods');
     cartData.push(data)
     const allNum = this.getAllNum(cartData)
     console.log(allNum)
@@ -142,9 +141,7 @@ Page({
       fail: () => { },
       complete: () => { }
     });
-    // 存储数量到storage
     wx.setStorageSync('allNum', allNum);
-    // 写到外面就可以让showToast 显示在前一个页面
     setTimeout(() => {
       wx.showToast({
         title: '已加入购物车',

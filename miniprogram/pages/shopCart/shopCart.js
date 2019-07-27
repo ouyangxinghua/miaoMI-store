@@ -54,8 +54,9 @@ Page({
   goDeleteGoods(e) {
     let index = e.currentTarget.dataset.index
     let id = e.currentTarget.dataset.id
+    console.log(index, id)
     wx.navigateTo({
-      url: `/pages/deleteShop/deleteShop?index=${index}&id=${id}`,
+      url: `/pages/modifyGood/modifyGood?index=${index}&id=${id}`,
     });
 
   },

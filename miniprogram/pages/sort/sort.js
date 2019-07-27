@@ -27,18 +27,20 @@ Page({
   },
   // 点击左边标签要修改的信息
   switchTab(e) {
+    console.log(e.target.dataset.index)
     this.setData({
       curIndex: e.target.dataset.index,
       toView: e.target.dataset.index
     })
   },
-  // 判断curIndex因该是那个
+  // 判断curIndex应该是那个
   getCurrentIndex(scrollTop) {
     const scrollArr = this.data.heightArr
     let find = scrollArr.findIndex(item => {
-      // 提前10rpx触发效果
-      return scrollTop < item - 10
+      // 提前120rpx触发效果
+      return scrollTop < item - 120
     })
+    console.log(find)
     let curChar = String.fromCharCode(65 + find)
     return curChar
   },

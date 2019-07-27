@@ -1,16 +1,16 @@
 const API = require('../../utils/request.js')
 Page({
   data: {
-    id: '', //商品id
-    swiper_img: [], //需要轮播的图片
-    brief: [],     //商品的描述信息
-    defaultData: [],  //默认的商品信息
-    details_param: [],  //默认的配置信息
-    details_img: [],  //概述图片
-    param_img: [],    //参数图片
-    state: 'details_img', //判断概述 参数
-    allNum: 0,  //选择了的商品数量
-    default_change: {}, // 已选所显示的信息
+    id: '', 
+    swiper_img: [], 
+    brief: [],     
+    defaultData: [], 
+    details_param: [],  
+    details_img: [],  
+    param_img: [],
+    state: 'details_img',
+    allNum: 0,  
+    default_change: {}, 
   },
 
   onLoad: function (options) {
@@ -94,12 +94,11 @@ Page({
   },
   goCart() {
     wx.reLaunch({
-      url: '/pages/carts/carts',
+      url: '/pages/shopCart/shopCart',
     });
   },
   onShow: function () {
     const allNum = wx.getStorageSync('allNum');
-    //  console.log("allNum",allNum)
     this.setData({
       allNum
     })

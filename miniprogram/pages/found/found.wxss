@@ -1,4 +1,3 @@
-/* miniprogram/pages/found/found.wxss */
 @import "../../template/found/found.wxss";
 .container{
     width: 100%;

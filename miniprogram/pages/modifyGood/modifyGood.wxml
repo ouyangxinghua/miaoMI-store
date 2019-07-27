@@ -8,7 +8,8 @@
         <view class="detail_name_color">{{curItem.name}} {{item.choose}}</view>
         <view class="detail_price_dui">
           <view class="detail_price">{{curItem.price}}</view>
-          <image src="../../images/dui.png" class="image-dui"/>
+          <image src="../../images/dui.png" class="image-dui" wx:if="{{colorIndex == index}}"/>
+          <image src="../../images/对勾.png" class="image-dui" wx:if="{{colorIndex !== index}}"/>
         </view>
       </view>
     </block>

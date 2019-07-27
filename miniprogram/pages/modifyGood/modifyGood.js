@@ -1,3 +1,4 @@
+// miniprogram/pages/deleteGoods/deleteGoods.js
 const API = require('../../utils/request.js');
 let goods = []
 Page({
@@ -7,10 +8,10 @@ Page({
    */
   data: {
     id: '',  //商品id
-    curIndex: 0,  
+    curIndex: 0,
     curItem: {},
     arrItem: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    index: 0,   
+    index: 0,
     num: 0,
     allColor: [],
     colorIndex: 0,
@@ -21,7 +22,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options)
+    console.log(options)
     const id = options.id
     const curIndex = options.index || 0
     goods = wx.getStorageSync('goods');
@@ -46,7 +47,7 @@ Page({
         const goodData = res.data.filter(item => item.id === self.data.id)[0]
         console.log(goodData.versionData.colorImg)
         const allColor = goodData.versionData.colorImg
-        const colorIndex = allColor.findIndex(item =>  item.choose == this.data.color)
+        const colorIndex = allColor.findIndex(item => item.choose == this.data.color)
         console.log(colorIndex)
         this.setData({
           allColor,
@@ -72,7 +73,7 @@ Page({
       data: goods,
       success: (result) => {
         let pageIndex = getCurrentPages()
-        let backIndex = pageIndex.length - 2
+        let backIndex = pageIndex.length
         wx.navigateBack({
           delta: backIndex
         })
@@ -106,8 +107,8 @@ Page({
           });
         }
       },
-      fail: () => {},
-      complete: () => {}
+      fail: () => { },
+      complete: () => { }
     });
 
   },
@@ -125,6 +126,54 @@ Page({
       colorIndex,
       color
     })
-    console.log(colorIndex,color)
+    console.log(colorIndex, color)
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

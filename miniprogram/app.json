@@ -3,10 +3,11 @@
     "pages/index/index",
     "pages/found/found",
     "pages/sort/sort",
-    "pages/carts/carts",
+    "pages/shopCart/shopCart",
     "pages/mine/mine",
     "pages/shopDetail/shopDetail",
-    "pages/selectShop/selectShop"
+    "pages/modifyGood/modifyGood"
+
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -40,7 +41,7 @@
       },
       {
         "text": "购物车",
-        "pagePath": "pages/carts/carts",
+        "pagePath": "pages/shopCart/shopCart",
         "iconPath": "images/tabbar/购物车.png",
         "selectedIconPath": "images/tabbar/购物车选中.png"
       },
