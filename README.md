@@ -20,11 +20,14 @@
 
 ## 项目录屏
 
-<figure class="half">
-    <h3>tabbar操作</h3>
-    <img src="https://6f75-ouyang-3x8th-1259079251.tcb.qcloud.la/redbook/tabbar%E6%93%8D%E4%BD%9C.gif?sign=e87de2941611f6e7c638ad276567fd8d&t=1565668246"  width="300" height="550">
-    <h3>购物车和订单操作</h3>
-    <img src="https://6f75-ouyang-3x8th-1259079251.tcb.qcloud.la/redbook/%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%92%8C%E8%AE%A2%E5%8D%95%E6%93%8D%E4%BD%9C.gif?sign=d1ae20c5f7581a301c4f4e6e9044f5df&t=1565668221" width="300" height="550">
-</figure>
+<h3>tabbar操作</h3>
+
+![](https://6f75-ouyang-3x8th-1259079251.tcb.qcloud.la/redbook/tabbar%E6%93%8D%E4%BD%9C.gif?sign=e87de2941611f6e7c638ad276567fd8d&t=1565668246)
+
+<h3>购物车和订单操作</h3>
+
+![](https://6f75-ouyang-3x8th-1259079251.tcb.qcloud.la/redbook/%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%92%8C%E8%AE%A2%E5%8D%95%E6%93%8D%E4%BD%9C.gif?sign=6645d342b5c6287da3feee863a935952&t=1565668593)
+
+
 
 
